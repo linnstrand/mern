@@ -1,6 +1,6 @@
 const asyncHandler = require('express-async-handler');
 
-const Data = require('./models/data');
+const Data = require('../models/dataModel');
 
 const getData = asyncHandler(async (req, res) => {
   const data = await Data.find();
