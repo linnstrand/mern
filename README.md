@@ -12,5 +12,9 @@ Dependencies:
 - express-async-handler: Simple middleware for handling exceptions inside of async express routes and passing them to your express error handlers. **Probably useless when Express 5 is out!**
 - bcrypt: Password-hashing function
 - jwt Generate web token from header (algorithm and token type), payload and signature.
+- concurrently: Run multiple commands concurrently. like `"dev": "concurrently \"npm run server\" \"npm run client\""`
+- react-redux:
+- react-icons:
+- axios:
 
 # JWT Authentication

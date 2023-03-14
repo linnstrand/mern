@@ -12,7 +12,7 @@ const setData = asyncHandler(async (req, res) => {
     res.status(400);
     throw new Error('Please add a text field');
   }
-  const data = await Data.create({ text: req.body.text });
+  const data = await Data.create({ text: req.body.text, user: req.user.id });
   res.status(200).json(data);
 });
 
