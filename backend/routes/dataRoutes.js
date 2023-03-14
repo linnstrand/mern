@@ -7,8 +7,9 @@ const {
 } = require('../controllers/dataController');
 const router = express.Router();
 
-router.get('/', getData).post('/', setData);
+const { protect } = require('../middleware/authMiddleware');
 
-router.put('/:id', updateData).delete('/:id', deleteData);
+router.get('/', protect, getData).post('/', protect, setData);
+router.put('/:id', protect, updateData).delete('/:id', protect, deleteData);
 
 module.exports = router;

@@ -11,6 +11,6 @@ Dependencies:
 - nodemon: restarts the node application when file changes in the directory are detected.
 - express-async-handler: Simple middleware for handling exceptions inside of async express routes and passing them to your express error handlers. **Probably useless when Express 5 is out!**
 - bcrypt: Password-hashing function
-- jwt Generate web token.
+- jwt Generate web token from header (algorithm and token type), payload and signature.
 
 # JWT Authentication

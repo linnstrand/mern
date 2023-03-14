@@ -2,6 +2,8 @@ const jwt = require('jsonwebtoken');
 const asyncHandler = require('express-async-handler');
 const User = require('../models/userModel');
 
+// middleware use next to move to next middleware
+// We must later remember to put the bearer token in the header!
 const protect = asyncHandler(async (req, res, next) => {
   let token;
   const auth = req.headers.authorization;
@@ -19,7 +21,7 @@ const protect = asyncHandler(async (req, res, next) => {
 
       next();
     } catch (error) {
-      console.log(error);
+      console.error(error);
       res.status(401);
       throw new Error('Not authorized');
     }
